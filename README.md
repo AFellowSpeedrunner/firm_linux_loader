@@ -17,3 +17,5 @@ under the terms of any later revisions of the GPL. Refer to the provided
 * List of
   [contributors](https://github.com/linux-3ds/firm_linux_loader/graphs/contributors)
   on GitHub.
+
+firm_linux_loader is based off the [firm_linux_loader](https://github.com/linux-3ds/firm_linux_loader) repository from the ["Linux for 3DS" team](https://github.com/linux-3ds).
