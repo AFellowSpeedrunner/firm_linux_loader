@@ -53,12 +53,10 @@ static int load_file(const char *filename, uint32_t addr)
 }
 
 int main(int argc, char *argv[])
-{
+{	
 	const char *dtb_filename;
 
 	InitScreenFbs(argc, argv);
-	ClearScreenFull(true, true);
-	DebugClear();
 
 	Debug("-- FIRM Linux loader by xerpi --");
 

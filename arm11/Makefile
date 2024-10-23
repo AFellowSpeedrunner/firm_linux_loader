@@ -18,11 +18,11 @@ CFLAGS	= -Wall -Os -fno-builtin $(ARCH) $(INCLUDE) -fno-stack-protector
 all: $(TARGET).elf
 
 $(TARGET).elf: $(OBJS)
-	$(CC) -T link.ld -Wl,--nmagic $^ -o $@ -nostartfiles
+	arm-none-eabi-gcc -T link.ld -Wl,--nmagic $^ -o $@ -nostartfiles
 %.o: %.c
-	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
+	arm-none-eabi-gcc  $(CFLAGS) -MMD -MP -c $< -o $@
 %.o: %.S
-	$(CC) $(ASFLAGS) -MMD -MP -c $< -o $@
+	arm-none-eabi-gcc  $(ASFLAGS) -MMD -MP -c $< -o $@
 
 clean:
 	@rm -f $(OBJS) $(TARGET).elf $(DEPS)
